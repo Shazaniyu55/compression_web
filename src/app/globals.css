@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-ink text-fg antialiased;
+}
+
+::selection {
+  @apply bg-amber/30 text-fg;
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-amber/70 ring-offset-2 ring-offset-ink rounded-sm;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
